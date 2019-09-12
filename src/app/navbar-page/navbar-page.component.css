@@ -1,3 +1,5 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
 *,
 *:before,
 *:after {
@@ -8,6 +10,7 @@
   text-decoration: none;
 }
 
+/* nav bar */
 nav {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -43,90 +46,6 @@ nav #brand a:hover {
   color: #777777;
 }
 
-nav #menu {
-  float: left;
-  left: 11%;
-  position: relative;
-}
-
-nav #menu li {
-  display: inline-block;
-  padding: 0px 30px;
-  cursor: pointer;
-  line-height: 70px;
-  position: relative;
-  transition: all 0.3s ease-out;
-
-}
-
-nav #menu li a {
-  color: #fff;
-}
-
-nav #menu li:hover {
-  background: #333;
-}
-
-@media (max-width: 768px) {
-  nav .button_container {
-    visibility: visible;
-    opacity: 1;
-    display: block;
-  }
-  nav #menu {
-    display: none;
-  }
-  @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  .icon--twitter::before {
-    content: "\f099";
-  }
-  .social__icon--twitter {
-    background-color: #32b9e7;
-  }
-  .social__icon--twitter:hover {
-    background-color: #2b9dc4;
-  }
-  .icon--instagram::before {
-    content: "\f16d";
-  }
-  .social__icon--instagram {
-    background-color: #6291b2;
-  }
-  .social__icon--instagram:hover {
-    background-color: #537b97;
-  }
-  .social__item_desktop {
-    display: inline-block;
-    margin: 40%;
-  }
-  .icon, [class^="icon--"] {
-    font-family: 'FontAwesome';
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .social__icon_desktop, [class^="social__icon"] {
-    font-size: 1.4em;
-    color: white;
-    text-decoration: none;
-    border-radius: 100%;
-    width: 1.7em;
-    height: 1.7em;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-
 .button_container {
   position: absolute;
   top: 40%;
@@ -136,25 +55,24 @@ nav #menu li:hover {
   cursor: pointer;
   z-index: 100;
   transition: opacity 0.25s ease;
-  display: none;
 }
-nav .button_container:hover {
+.button_container:hover {
   opacity: 0.7;
 }
 .button_container.active .top {
   transform: translateY(10px) translateX(0) rotate(45deg);
-  background: #fff;
+  background: #008000;
 }
 .button_container.active .middle {
   opacity: 0;
-  background: #fff;
+  background: #008000;
 }
 .button_container.active .bottom {
   transform: translateY(-10px) translateX(0) rotate(-45deg);
-  background: #fff;
+  background: #008000;
 }
 .button_container span {
-  background: #ff5252;
+  background: #ffffff;
   border: none;
   height: 5px;
   width: 100%;
@@ -172,6 +90,7 @@ nav .button_container:hover {
 }
 
 
+/* full responsive menu */
 .overlay {
   position: fixed;
   top: 0;
@@ -185,7 +104,7 @@ nav .button_container:hover {
 }
 .overlay:before {
   content: '';
-  background: #ff5252;
+  background: #ffffff;
   left: -55%;
   top: 0;
   width: 50%;
@@ -195,7 +114,7 @@ nav .button_container:hover {
 }
 .overlay:after {
   content: '';
-  background: #ff5252;
+  background: #ffffff;
   right: -55%;
   top: 0;
   width: 50%;
@@ -204,7 +123,7 @@ nav .button_container:hover {
   transition: all 0.35s ease;
 }
 .overlay.open {
-  opacity: 0.9;
+  /*opacity: 0.9;*/
   visibility: visible;
   height: 100%;
 }
@@ -239,10 +158,44 @@ nav .button_container:hover {
   z-index: 100;
 }
 
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
-*, *::before, *::after {
-  box-sizing: border-box;
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
 }
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #008000;
+  text-decoration: none;
+  overflow: hidden;
+}
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li  {
+  width: 100%;
+}
+.overlay ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #008000;
+  transition: 0.35s;
+}
+
 .icon--twitter::before {
   content: "\f099";
 }
@@ -288,49 +241,11 @@ nav .button_container:hover {
   justify-content: center;
 }
 .social__container_mobile {
-  padding: 1em;
   font-size: 1.5em;
-  padding-left: 13%;
-  padding-top: 12%;
+  padding-left: 2%;
+  padding-top: 5%;
 }
 
-.overlay ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  display: inline-block;
-  position: relative;
-  height: 100%;
-}
-.overlay ul li {
-  display: block;
-  height: 25%;
-  height: calc(100% / 4);
-  min-height: 50px;
-  position: relative;
-  opacity: 0;
-}
-.overlay ul li a {
-  display: block;
-  position: relative;
-  color: #fff;
-  text-decoration: none;
-  overflow: hidden;
-}
-.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li  {
-  width: 100%;
-}
-.overlay ul li a:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0%;
-  transform: translateX(-50%);
-  height: 3px;
-  background: #fff;
-  transition: 0.35s;
-}
 @keyframes fadeInRight {
   0% {
     opacity: 0;
@@ -340,4 +255,32 @@ nav .button_container:hover {
     opacity: 1;
     left: 0;
   }
+}
+
+
+@media (max-width: 640px) {
+  .social__container_mobile {
+    font-size: 1.5em;
+    padding-left: 6%;
+    padding-top: 17%;
+  }
+
+}
+
+@media (min-width: 641px) and (max-width: 800px) {
+
+
+
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+
+
+
+}
+
+@media (min-width: 1025px) {
+
+
+
 }
