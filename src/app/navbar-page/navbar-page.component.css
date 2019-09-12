@@ -1,0 +1,343 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+nav {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+nav #brand {
+  float: left;
+  display: block;
+  margin-left: 20px;
+  font-size: 50px;
+  line-height: 70px;
+  font-weight: bold;
+}
+
+nav #brand a {
+  color: #fff;
+  transition: all 0.3s ease-out;
+}
+
+nav #brand a:hover {
+  color: #777777;
+}
+
+nav #menu {
+  float: left;
+  left: 11%;
+  position: relative;
+}
+
+nav #menu li {
+  display: inline-block;
+  padding: 0px 30px;
+  cursor: pointer;
+  line-height: 70px;
+  position: relative;
+  transition: all 0.3s ease-out;
+
+}
+
+nav #menu li a {
+  color: #fff;
+}
+
+nav #menu li:hover {
+  background: #333;
+}
+
+@media (max-width: 768px) {
+  nav .button_container {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+  nav #menu {
+    display: none;
+  }
+  @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  .icon--twitter::before {
+    content: "\f099";
+  }
+  .social__icon--twitter {
+    background-color: #32b9e7;
+  }
+  .social__icon--twitter:hover {
+    background-color: #2b9dc4;
+  }
+  .icon--instagram::before {
+    content: "\f16d";
+  }
+  .social__icon--instagram {
+    background-color: #6291b2;
+  }
+  .social__icon--instagram:hover {
+    background-color: #537b97;
+  }
+  .social__item_desktop {
+    display: inline-block;
+    margin: 40%;
+  }
+  .icon, [class^="icon--"] {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .social__icon_desktop, [class^="social__icon"] {
+    font-size: 1.4em;
+    color: white;
+    text-decoration: none;
+    border-radius: 100%;
+    width: 1.7em;
+    height: 1.7em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+.button_container {
+  position: absolute;
+  top: 40%;
+  right: 3%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.25s ease;
+  display: none;
+}
+nav .button_container:hover {
+  opacity: 0.7;
+}
+.button_container.active .top {
+  transform: translateY(10px) translateX(0) rotate(45deg);
+  background: #fff;
+}
+.button_container.active .middle {
+  opacity: 0;
+  background: #fff;
+}
+.button_container.active .bottom {
+  transform: translateY(-10px) translateX(0) rotate(-45deg);
+  background: #fff;
+}
+.button_container span {
+  background: #ff5252;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+.button_container span:nth-of-type(2) {
+  top: 10px;
+}
+.button_container span:nth-of-type(3) {
+  top: 20px;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, width 0.35s;
+  z-index: 50;
+}
+.overlay:before {
+  content: '';
+  background: #ff5252;
+  left: -55%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  transition: left 0.35s ease;
+}
+.overlay:after {
+  content: '';
+  background: #ff5252;
+  right: -55%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.35s ease;
+}
+.overlay.open {
+  opacity: 0.9;
+  visibility: visible;
+  height: 100%;
+}
+.overlay.open:before {
+  left: 0;
+}
+.overlay.open:after {
+  right: 0;
+}
+.overlay.open li {
+  animation: fadeInRight 0.5s ease forwards;
+  animation-delay: 0.35s;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: 0.45s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: 0.55s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: 0.65s;
+}
+.overlay nav {
+  position: relative;
+  height: 30%;
+  top: 38%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-family: 'Vollkorn', serif;
+  font-weight: 400;
+  text-align: center;
+  z-index: 100;
+}
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+.icon--twitter::before {
+  content: "\f099";
+}
+.social__icon--twitter {
+  background-color: #32b9e7;
+}
+.social__icon--twitter:hover {
+  background-color: #2b9dc4;
+}
+.icon--instagram::before {
+  content: "\f16d";
+}
+.social__icon--instagram {
+  background-color: #6291b2;
+}
+.social__icon--instagram:hover {
+  background-color: #537b97;
+}
+.social__item_mobile {
+  display: inline-block;
+  margin-right: 1.0em;
+}
+.icon, [class^="icon--"] {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.social__icon_mobile, [class^="social__icon"] {
+  font-size: 1.4em;
+  color: white;
+  text-decoration: none;
+  border-radius: 100%;
+  width: 1.7em;
+  height: 1.7em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social__container_mobile {
+  padding: 1em;
+  font-size: 1.5em;
+  padding-left: 13%;
+  padding-top: 12%;
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+}
+.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li  {
+  width: 100%;
+}
+.overlay ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #fff;
+  transition: 0.35s;
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
