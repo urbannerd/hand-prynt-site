@@ -52,8 +52,8 @@
   z-index: 1;
   float: none;
   clear: both;
-  width: 50%;
-  height: 0;
+  width: 55%;
+  height: 40%;
 }
 
 .video-wrapper > iframe.has-media-controls-hidden::-webkit-media-controls {
@@ -77,7 +77,7 @@
 
 .videotitle {
   position: absolute;
-  top: 80%;
+  top: 90%;
   left: 50%;
   color: #ffffff;
   font-size: 3vw;
