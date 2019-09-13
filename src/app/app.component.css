@@ -48,6 +48,12 @@
 .video-wrapper {
   position: relative;
   z-index: 1;
+  border: 5px outset #ddd;
+  width:500px;
+  height: 360px;
+  text-align: center;
+  background-color: black;
+  opacity: 0.9
 }
 
 .video-wrapper > video {
@@ -59,18 +65,26 @@
   display: none;
 }
 
-.playpause {
-  background-image:url(http://png-4.findicons.com/files/icons/2315/default_icon/256/media_play_pause_resume.png);
-  background-repeat:no-repeat;
-  width:50%;
-  height:50%;
-  position:absolute;
-  left:0%;
-  right:0%;
-  top:0%;
-  bottom:0%;
-  margin:auto;
-  background-size:contain;
-  background-position: center;
-  z-index: 1;
+.play i {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  color: #008000;
+  font-size: 70px;
+  background: #fff;
+  border-radius: 50%;
+  height: 40px;
+  width: 51px;
+  line-height: 50px;
+  z-index:2;
+}
+.video-poster{
+		background: url('http://moarthemes.com/wp-content/uploads/2015/03/video_background.png');
+	  background-repeat: no-repeat;
+	  position: absolute;
+	  width: 940px;
+	  height: 529px;
+}
+.play i:hover{
+	cursor:pointer;
 }
