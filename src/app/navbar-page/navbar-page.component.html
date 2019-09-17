@@ -1,6 +1,8 @@
 <nav>
   <span id="brand">
-    <a href="javascript:;">Handprynt</a>
+    <a [routerLink]="['']">
+      <img class="logo-navbar" src="/assets/img/temp_logo.png" alt="">
+    </a>
   </span>
   
 
@@ -16,11 +18,11 @@
 <div class="overlay" id="overlay">
   <nav class="overlay-menu">
     <ul>
-      <li><a href="javascript:;">HOME</a></li>
-      <li><a href="javascript:;">STORIES</a></li>
+      <li><a [routerLink]="['/blog-page']">HOME</a></li>
+      <li><a [routerLink]="['/blog-page']">STORIES</a></li>
       <li><a [routerLink]="['/blog-page']">BLOG</a></li>
-      <li><a href="javascript:;">ABOUT US</a></li>
-      <li><a href="javascript:;">CONTACT US</a></li>
+      <li><a [routerLink]="['/blog-page']">ABOUT US</a></li>
+      <li><a [routerLink]="['/blog-page']">CONTACT US</a></li>
     </ul>
     <div class="social__container_mobile">   
       <div class="social__item_mobile">

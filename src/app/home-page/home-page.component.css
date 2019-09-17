@@ -46,14 +46,13 @@
     position: relative;
     padding-bottom: 25%;
     padding-top: 25px;
-    border: 5px outset #008000;
-    background-color: black;
-    opacity: 0.9;
+    border: 5px outset #ffffff;
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 1;
     float: none;
     clear: both;
-    width: 55%;
-    height: 40%;
+    width: 40%;
+    height: 25%;
   }
   
   .video-wrapper > iframe.has-media-controls-hidden::-webkit-media-controls {
@@ -72,7 +71,7 @@
     height: px;
     width: 47px;
     line-height: 50px;
-    z-index: 2;
+    z-index: 1000;
   }
   
   .videotitle {
@@ -84,6 +83,7 @@
     text-align: center;
     white-space: nowrap ;
     transform: translate(-50%, -50%);
+    font-family: Helvetica
   }
   
   .video-poster {
