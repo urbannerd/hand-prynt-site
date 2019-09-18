@@ -63,18 +63,18 @@ nav #brand a {
 }
 .button_container.active .top {
   transform: translateY(10px) translateX(0) rotate(45deg);
-  background: #008000;
+  background: #000000;
 }
 .button_container.active .middle {
   opacity: 0;
-  background: #008000;
+  background: #000000;
 }
 .button_container.active .bottom {
   transform: translateY(-10px) translateX(0) rotate(-45deg);
-  background: #008000;
+  background: #000000;
 }
 .button_container span {
-  background: #000000;
+  background: #ffffff;
   border: none;
   height: 5px;
   width: 100%;
@@ -179,7 +179,7 @@ nav #brand a {
 .overlay ul li a {
   display: block;
   position: relative;
-  color: #008000;
+  color: #000000;
   text-decoration: none;
   overflow: hidden;
   font-family: Helvetica
@@ -195,7 +195,7 @@ nav #brand a {
   width: 0%;
   transform: translateX(-50%);
   height: 3px;
-  background: #008000;
+  background: #000000;
   transition: 0.35s;
 }
 
