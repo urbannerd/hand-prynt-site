@@ -16,10 +16,6 @@ $(document).ready(function(){
 		
 		
 	});
-
-	var herovide = document.getElementById('videoBanner');
-       herovide.autoplay=true;
-       herovide.load();  
 });
 
 
