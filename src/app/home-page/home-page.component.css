@@ -46,7 +46,8 @@
     position: relative;
     padding-bottom: 25%;
     padding-top: 25px;
-    border: 13px outset #ffffff;
+    border: 7px #ffffff;
+    border-style: solid;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 1;
     float: none;
@@ -55,9 +56,6 @@
     height: 1%;
   }
   
-  .video-wrapper > iframe.has-media-controls-hidden::-webkit-media-controls {
-    display: none;
-  }
   
   .play i {
     position: absolute;
@@ -67,50 +65,85 @@
     color: #000000;
     font-size: 70px;
     background: #fff;
-    border-radius: 50%;
+    border-radius: 60%;
     height: px;
-    width: 45px;
+    width: 49px;
     line-height: 50px;
     z-index: 1000;
   }
   
-  .teaser {
-    background-size: cover;
+  .pulse {
     position: absolute;
-    
-  }
+    top: 50.5%;
+    left: 51.2%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    line-height: 50px;
+    z-index: 1000;
+
+}
+
+
+.pulse div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 4px solid white;
+    border-radius: 50%;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-iteration-count: infinite;
+    animation-duration: 2900ms;
+    opacity: 0;
+}
+
+.pulse div.one {
+    animation-name: pulse;
+}
+
+.pulse div.two {
+    animation-name: pulse;
+    animation-delay: 1000ms;
+}
+
+.pulse div.three {
+    animation-name: pulse;
+    animation-delay: 2000ms;
+}
+
+@keyframes pulse {
+    0% {
+        margin: -4px 0 0 -4px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    25% {
+        margin: -17px 0 0 -17px;
+        width: 26px;
+        height: 26px;
+        opacity: 1;
+        border-size: 4px;
+    }
+    100% {
+        margin: -51px 0 0 -51px;
+        width: 96px;
+        height: 96px;
+        opacity: 0;
+        border-size: 6px;
+    }
+}
+
    #videoPlayer {
     max-width: 100%;
     background-color: #000000;
     padding: 0;
     margin: 0;
-    height: 100vh;
-    width: 100%;
+    height: 82vh;
+    width: 99vh;
   }
 
-  .teaser .close {
-    color: white;
-    position: absolute;
-    /* background: blue !important; */
-    border: 0;
-    top: 0;
-    z-index: 99999;
-    right: 3%;
-    float: none;
-    opacity: 1;
-    font-size: 40px;
-    font-weight: 400;
-  }
-
-  .fullscreenvideo {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 1px;
-    width: 100%;
-    height: 100%;
-  }
-
+  
   .videotitle {
     position: absolute;
     top: 90%;
@@ -135,6 +168,9 @@
     color: #141313;
   }
   
+  .close {
+    display: none
+  }
 
   @media (max-width: 640px) {
     .social__container_mobile {
@@ -147,14 +183,119 @@
       position: relative;
       padding-bottom: 25%;
       padding-top: 25px;
-      border: 13px outset #ffffff;
+      border: 7px #ffffff;
+      border-style: solid;
       background-color: rgba(0, 0, 0, 0.2);
       z-index: 1;
       float: none;
       clear: both;
-      width: 55%;
-      height: 40%;
+      width: 80%;
+      height: 35%;
     }
+
+    #videoPlayer {
+      max-width: 100%;
+      background-color: #000000;
+      padding: 0;
+      margin: 0;
+      height: 85vh;
+      width: 100%;
+    }
+
+    .videotitle {
+      position: absolute;
+      top: 78%;
+      left: 50%;
+      color: #ffffff;
+      font-size: 6vw;
+      text-align: center;
+      white-space: nowrap ;
+      transform: translate(-50%, -50%);
+      font-family: 'Arial', Courier, monospace
+
+    }
+
+    .close {
+      display: block
+    }
+
+
+    .play i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #000000;
+      font-size: 70px;
+      background: #fff;
+      border-radius: 60%;
+      height: px;
+      width: 49px;
+      line-height: 50px;
+      z-index: 1000;
+    }
+    
+    .pulse {
+      position: absolute;
+      top: 50.5%;
+      left: 53%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      line-height: 50px;
+      z-index: 1000;
+  
+  }
+  
+  
+  .pulse div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 4px solid white;
+      border-radius: 50%;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      animation-iteration-count: infinite;
+      animation-duration: 2900ms;
+      opacity: 0;
+  }
+  
+  .pulse div.one {
+      animation-name: pulse;
+  }
+  
+  .pulse div.two {
+      animation-name: pulse;
+      animation-delay: 1000ms;
+  }
+  
+  .pulse div.three {
+      animation-name: pulse;
+      animation-delay: 2000ms;
+  }
+  
+  @keyframes pulse {
+      0% {
+          margin: -4px 0 0 -4px;
+          width: 0;
+          height: 0;
+          opacity: 0;
+      }
+      25% {
+          margin: -17px 0 0 -17px;
+          width: 26px;
+          height: 26px;
+          opacity: 1;
+          border-size: 4px;
+      }
+      100% {
+          margin: -51px 0 0 -51px;
+          width: 96px;
+          height: 96px;
+          opacity: 0;
+          border-size: 6px;
+      }
+  }
   
   }
   

@@ -1,22 +1,31 @@
 <div class="section">
         <div class="video-wrapper">
+            <div class="pulse">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>  
                 <div class="play"  data-toggle="modal" data-target="#modal-fullscreen"><div class="videotitle">Welcome to Handprynt!</div><i class="fa fa-play-circle" ></i></div>
+     
             </div>
-        
-            <div class="teaser container-fluid" id="myModal" >
-                    <div class="modal" id="modal-fullscreen" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    
-           
-                                <video id="videoPlayer" class=fullscreenvideo  muted="muted" controls>
+
+                    <div class="modal fade"  id="modal-fullscreen">
+                            <div class="modal-dialog">
+                                    <div class="modal-content">
+                                     <button type="button" class="close" data-dismiss="modal"><i class="icon-xs-o-md"></i></button>
+                                     <div class="modal-header">
+                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                <video id="videoPlayer"  muted="muted" controls>
                                         <source src="https://videocel.s3.amazonaws.com/2017+DREAMING+WITH+MY+EYES+OPEN.mp4" type="video/mp4"/>
                                         <source src="https://videocel.s3.amazonaws.com/2017+DREAMING+WITH+MY+EYES+OPEN.webm" type="video/webm"/>
                                         <source src="https://videocel.s3.amazonaws.com/2017DREAMINGWITHMYEYESOPEN.ogg" type="video/ogg"/>  
                                         </video>                
-                 
-                      </div>
-                    
-                  </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
 
 <!--just in case-->
 <!--<div class="video-wrapper">
@@ -27,7 +36,7 @@
 
 <div class="video-container">
     <div class="color-overlay"></div>
-    <video autoplay="autoplay" muted="muted" loop="loop" playsinline>
+    <video loop autoplay muted controls="true" playsinline>
         <source src="https://videocel.s3.amazonaws.com/2017cut.mp4" type="video/mp4"/>
         <source src="https://videocel.s3.amazonaws.com/2017cut.webm" type="video/webm"/>
         <source src="https://videocel.s3.amazonaws.com/2017cut.ogg" type="video/ogg"/>  

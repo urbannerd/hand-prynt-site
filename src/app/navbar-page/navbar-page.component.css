@@ -40,6 +40,7 @@ nav #brand {
 img.logo-navbar {
   width: 4rem !important;
   height: 4rem !important;
+  top: 45%;
 }
 
 
@@ -50,13 +51,13 @@ nav #brand a {
 
 .button_container {
   position: absolute;
-  top: 40%;
+  top: 45%;
   right: 3%;
   height: 27px;
   width: 35px;
   cursor: pointer;
   z-index: 100;
-  transition: opacity 0.25s ease;
+  transition: opacity 1s ease;
 }
 .button_container:hover {
   opacity: 0.7;
@@ -81,7 +82,7 @@ nav #brand a {
   position: absolute;
   top: 0px;
   left: 0;
-  transition: all 0.35s ease;
+  transition: all 1s ease;
   cursor: pointer;
 }
 .button_container span:nth-of-type(2) {
@@ -112,7 +113,7 @@ nav #brand a {
   width: 50%;
   height: 100%;
   position: absolute;
-  transition: left 0.35s ease;
+  transition: left 1.0s ease;
 }
 .overlay:after {
   content: '';
@@ -122,7 +123,7 @@ nav #brand a {
   width: 50%;
   height: 100%;
   position: absolute;
-  transition: all 0.35s ease;
+  transition: all 1.0s ease;
 }
 .overlay.open {
   /*opacity: 0.9;*/
@@ -182,7 +183,7 @@ nav #brand a {
   color: #000000;
   text-decoration: none;
   overflow: hidden;
-  font-family: Helvetica
+  font-family: 'Arial', Courier, monospace
 }
 .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li  {
   width: 100%;
