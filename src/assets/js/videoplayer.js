@@ -1,21 +1,17 @@
 $(document).ready(function(){
 	$(".modal").modal('hide');
-
-
-
 	var url = $("#videoPlayer").attr('src');
-
 	$(".modal").on('hide.bs.modal', function(){
 		$("#videoPlayer").attr('src');
 		videoPlayer.pause() 
 	});
-
 	$(".modal").on('show.bs.modal', function(){
 		$("#videoPlayer").attr('src',  url);
-		videoPlayer.play() 	
-		
-		
+		videoPlayer.play()
+		videoPlayer.webkitEnterFullscreen() 
 	});
+
+
 });
 
 
