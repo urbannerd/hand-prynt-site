@@ -16,8 +16,16 @@
 
 
 <div class="overlay" id="overlay">
+    <div class="close-overlay" id="toggle">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
   <nav class="overlay-menu">
     <ul>
+            <a [routerLink]="['']">
+              <img class="logo-navbar-overlay" src="/assets/img/temp_logo.png" alt="">
+            </a>
       <li><a [routerLink]="['/blog-page']">HOME</a></li>
       <li><a [routerLink]="['/blog-page']">STORIES</a></li>
       <li><a [routerLink]="['/blog-page']">BLOG</a></li>

@@ -43,7 +43,11 @@ img.logo-navbar {
   top: 45%;
 }
 
-
+img.logo-navbar-overlay {
+  width: 4rem !important;
+  height: 4rem !important;
+  top: 45%;
+}
 nav #brand a {
   color: #fff;
   transition: all 0.3s ease-out;
@@ -102,12 +106,13 @@ nav #brand a {
   height: 100%;
   opacity: 1;
   visibility: hidden;
+  z-index: 1000;
   transition: opacity 0.35s, visibility 0.35s, width 0.35s;
-  z-index: 50;
 }
+
 .overlay:before {
   content: '';
-  background: #ffffff;
+  background: #feeb6a;
   left: -55%;
   top: 0;
   width: 50%;
@@ -124,7 +129,13 @@ nav #brand a {
   height: 100%;
   position: absolute;
   transition: all 1.0s ease;
+  background-image: url('/assets/img/overlayimg.jpeg');
+  background-repeat: repeat;
+  background-size: 95%;
+  background-attachment: fixed;
+  background-position: 10%;
 }
+
 .overlay.open {
   /*opacity: 0.9;*/
   visibility: visible;
@@ -150,11 +161,13 @@ nav #brand a {
   animation-delay: 0.65s;
 }
 .overlay nav {
-  position: relative;
+  position: absolute;
   height: 30%;
-  top: 38%;
+  top: 46%;
+  right: 50%;
+  float: right;
   transform: translateY(-50%);
-  font-size: 20px;
+  font-size: 30px;
   font-family: 'Vollkorn', serif;
   font-weight: 400;
   text-align: center;
@@ -246,8 +259,8 @@ nav #brand a {
 }
 .social__container_mobile {
   font-size: 1.5em;
-  padding-left: 2%;
-  padding-top: 4%;
+  padding-left: 8%;
+  padding-top: 20%;
 }
 
 @keyframes fadeInRight {
@@ -262,29 +275,148 @@ nav #brand a {
 }
 
 
-@media (max-width: 640px) {
-  .social__container_mobile {
-    font-size: 1.5em;
-    padding-left: 6%;
-    padding-top: 10%;
+
+
+@media (min-width:320px)  { 
+  .overlay:before {
+    content: '';
+    background: #feeb6a;
+    left: -55%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    transition: left 1.0s ease;
+  }
+  .overlay:after {
+    content: '';
+    background: #ffffff;
+    right: -55%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    transition: all 1.0s ease;
+    background-image: url('/assets/img/overlayimg-mobile.png');
+    background-repeat: no-repeat;
+    background-size: 210%;
+    background-color: #feeb6a;
+    background-attachment: absolute;
+    background-position:center;
   }
 
-}
+  .overlay nav {
+    position: absolute;
+    height: 30%;
+    width: 50%;
+    top: 46%;
+    right: 50%;
+    float: right;
+    transform: translateY(-50%);
+    font-size: 15px;
+    font-family: 'Vollkorn', serif;
+    font-weight: 400;
+    text-align: center;
+    z-index: 100;
+  }
 
-@media (min-width: 641px) and (max-width: 800px) {
+  .social__container_mobile {
+    font-size: 1.5em;
+    display: inline-block;
+    padding-left: 15%;
+    padding-top: 90%;
+  }
+  
+  img.logo-navbar-overlay {
+    width: 4rem !important;
+    height: 4rem !important;
+    top: 45%;
+    z-index: 10000;
+  }
+} /* smartphones, iPhone, portrait 480x320 phones */ 
 
+@media (min-width:481px)  { 
+ #overlay .close-overlay{
+    position: absolute;
+    right: 15px;
+    top: 34px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    z-index: inherit;
+    border-style: none;
+    border-color: transparent;
+  }
+  #overlay .close-overlay:hover {
+    opacity: 1;
+  }
+ #overlay .close-overlay:before, .close-overlay:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #000000;
+  }
+  .close-overlay:before {
+    transform: rotate(45deg);
+  }
+   .close-overlay:after {
+    transform: rotate(-45deg);
+  }
 
+  nav {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  .social__container_mobile {
+    font-size: 1.5em;
+    display: inline-block;
+    padding-left: 15%;
+    padding-top: 50%;
+  }
 
-}
+  .overlay:before {
+    content: '';
+    background: #feeb6a;
+    left: -55%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    transition: left 1.0s ease;    
+  }
 
-@media (min-width: 801px) and (max-width: 1024px) {
+  
+ img.logo-navbar-overlay {
+    width: 4rem !important;
+    height: 4rem !important;
+    top: 45%;
+  }
 
+ } /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 
+ 
+@media (min-width:641px)  { 
 
-}
+} /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+@media (min-width:961px)  { 
 
-@media (min-width: 1025px) {
+}/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media (min-width:1025px) { 
 
+}/* big landscape tablets, laptops, and desktops */ 
+@media (min-width:1281px) { 
 
-
-}
+} /* hi-res laptops and desktops */
