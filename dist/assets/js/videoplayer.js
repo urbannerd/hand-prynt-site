@@ -1,16 +1,28 @@
 $(document).ready(function(){
-	$(".modal").modal('hide');
-	var url = $("#videoPlayer").attr('src');
-	$(".modal").on('hide.bs.modal', function(){
-		$("#videoPlayer").attr('src');
-		videoPlayer.pause() 
-	});
-	$(".modal").on('show.bs.modal', function(){
-		$("#videoPlayer").attr('src',  url);
-		videoPlayer.play()
-		videoPlayer.webkitEnterFullscreen() 
-	});
+	var delayInMilliseconds = 1000; //1 second
+	var delayInMilliseconds2 = 2000; //2 second
+	var delayInMilliseconds3 = 3000; //2 second
+	$('#videoPlayer').hide();
+	$("#fullscreen").click(function() {
+		$('.transform').toggleClass('transform-active');
+		setTimeout(function() {
+			$('#videoPlayer').show();
+		  }, delayInMilliseconds3);
 
+		setTimeout(function() {
+			videoPlayer.webkitEnterFullscreen() 
+		  }, delayInMilliseconds2);
+		  
+		  setTimeout(function() {
+			videoPlayer.play();
+		  }, delayInMilliseconds);
+	  });
+	  
+	  $('.close').click(function() {
+		$('.transform').toggleClass('transform-active');
+		$('#videoPlayer').hide();
+		videoPlayer.pause()
+	});
 
 });
 
