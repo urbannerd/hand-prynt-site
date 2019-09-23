@@ -1,8 +1,10 @@
 $(document).ready(function () {
+  $('#toggle-mobile').click(function() {
+    $('#overlay').toggleClass('open');  
+   });
+  
   $('#toggle').click(function() {
-    $(this).toggleClass('active');
-    $('#overlay').toggleClass('open');
-    
+    $('#overlay').toggleClass('open'); 
    });
 
    $('#overlay li').on('click', function(){
@@ -10,10 +12,7 @@ $(document).ready(function () {
     $("#toggle").removeClass("active");
 });
 
-$('.close-overlay').click(function() {
-  $("#overlay").hide();
-  $('#toggle').removeClass('active');
 
-});
+
 }); // End of use strict
 

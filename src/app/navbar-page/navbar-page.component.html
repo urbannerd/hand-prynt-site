@@ -15,12 +15,17 @@
 
 
 
-<div class="overlay" id="overlay">
-    <div class="close-overlay" id="toggle">
+<div class="overlay tablet desktop mobile" id="overlay">
+    <div class="close-overlay" >
         <span class="top"></span>
         <span class="middle"></span>
         <span class="bottom"></span>
       </div>
+      <div class="button_container_mobile close-menu tablet desktop mobile" id="toggle-mobile">
+          <span class="top"></span>
+          <span class="middle"></span>
+          <span class="bottom"></span>
+        </div>
   <nav class="overlay-menu">
     <ul>
             <a [routerLink]="['']">
@@ -31,14 +36,14 @@
       <li><a [routerLink]="['/blog-page']">BLOG</a></li>
       <li><a [routerLink]="['/blog-page']">ABOUT US</a></li>
       <li><a [routerLink]="['/blog-page']">CONTACT US</a></li>
+      <div class="social__container tablet desktop mobile">   
+          <div class="social__item_mobile">
+                  <a target="_blank" href="https://www.twitter.com/handprynt/" class="social__icon--twitter"><i class="icon--twitter"></i></a>
+          </div>
+          <div class="social__item_mobile">
+                  <a target="_blank" href="https://www.instagram.com/handprynt/" class="social__icon--instagram"><i class="icon--instagram"></i></a>
+          </div>
+        </div>
     </ul>
-    <div class="social__container_mobile">   
-      <div class="social__item_mobile">
-              <a target="_blank" href="https://twitter.com/handprynt/" class="social__icon--twitter"><i class="icon--twitter"></i></a>
-      </div>
-      <div class="social__item_mobile">
-              <a target="_blank" href="https://www.instagram.com/handprynt/" class="social__icon--instagram"><i class="icon--instagram"></i></a>
-      </div>
-    </div>
   </nav>
 </div>
