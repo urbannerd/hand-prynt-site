@@ -6,7 +6,7 @@
   </span>
   
 
-  <div class="button_container" id="toggle">
+  <div class="button_container"  data-toggle="collapse" id="toggle">
     <span class="top"></span>
     <span class="middle"></span>
     <span class="bottom"></span>
@@ -28,14 +28,14 @@
         </div>
   <nav class="overlay-menu">
     <ul>
-            <a [routerLink]="['']">
+            
               <img class="logo-navbar-overlay" src="/assets/img/temp_logo.png" alt="">
-            </a>
-      <li><a [routerLink]="['/blog-page']">HOME</a></li>
-      <li><a [routerLink]="['/blog-page']">STORIES</a></li>
-      <li><a [routerLink]="['/blog-page']">BLOG</a></li>
-      <li><a [routerLink]="['/blog-page']">ABOUT US</a></li>
-      <li><a [routerLink]="['/blog-page']">CONTACT US</a></li>
+           
+      <li><a [routerLink]="['/']">HOME</a></li>
+      <li><a [routerLink]="['/videos']">VIDEOS</a></li>
+      <li><a [routerLink]="['/blogs']">BLOGS</a></li>
+      <li><a [routerLink]="['/aboutus']">ABOUT US</a></li>
+      <li><a [routerLink]="['/contactus']">CONTACT US</a></li>
       <div class="social__container tablet desktop mobile">   
           <div class="social__item_mobile">
                   <a target="_blank" href="https://www.twitter.com/handprynt/" class="social__icon--twitter"><i class="icon--twitter"></i></a>

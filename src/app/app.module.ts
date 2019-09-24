@@ -5,18 +5,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { BlogPageComponent } from './blog-page/blog-page.component';
-import { VideoPageComponent } from './video-page/video-page.component';
-import { ContactUsPageComponent } from './contact-us-page/contact-us-page.component';
 import { NavbarPageComponent } from './navbar-page/navbar-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { VideosComponent } from './videos/videos/videos.component';
+import { BlogsComponent } from './blogs/blogs/blogs.component';
+import { ContactusComponent } from './contactus/contactus/contactus.component';
+import { AboutusComponent } from './aboutus/aboutus/aboutus.component';
 
 
 const appRoutes: Routes = [
   {path: '', component: HomePageComponent},
-  { path: 'blog-page', component: BlogPageComponent},
-  { path: 'video-page', component: VideoPageComponent},
-  { path: 'contact-us-page', component: ContactUsPageComponent}
+  { path: 'blogs', component: BlogsComponent},
+  { path: 'videos', component: VideosComponent},
+  { path: 'aboutus', component: AboutusComponent},
+  { path: 'contactus', component: ContactusComponent}
 ];
 
 
@@ -24,11 +26,11 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     NavbarPageComponent,
-    BlogPageComponent,
-    VideoPageComponent,
-    ContactUsPageComponent,
-    NavbarPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    VideosComponent,
+    BlogsComponent,
+    ContactusComponent,
+    AboutusComponent
 
   ],
   imports: [
@@ -37,7 +39,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })

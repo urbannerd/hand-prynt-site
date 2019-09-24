@@ -8,9 +8,10 @@ $(document).ready(function () {
    });
 
    $('#overlay li').on('click', function(){
-    $("#overlay").hide();
-    $("#toggle").removeClass("active");
+    $(".open").removeClass('open');
+    
 });
+
 
 
 
