@@ -1,26 +1,23 @@
-$(document).ready(function(){
+$(document).ready(function() {
+  $(".filter-button").click(function() {
+    var value = $(this).attr("data-filter");
 
-    $(".filter-button").click(function(){
-        var value = $(this).attr('data-filter');
-        
-        if(value == "all")
-        {
-            //$('.filter').removeClass('hidden');
-            $('.filter').show('1000');
-        }
-        else
-        {
-//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.'+value).hide('3000');
-            $('.filter').filter('.'+value).show('3000');
-            
-        }
-    });
+    if (value == "all") {
+      //$('.filter').removeClass('hidden');
+      $(".filter").show("1000");
+    } else {
 
-$('#mylinks .filter-button').click(function(){
-    $('#mylinks .filter-button').removeClass('highlight');
-    $(this).addClass('highlight');
-   });
+      $(".filter")
+        .not("." + value)
+        .hide("3000");
+      $(".filter")
+        .filter("." + value)
+        .show("3000");
+    }
+  });
 
+  $("#mylinks .filter-button").click(function() {
+    $(".filter-button").removeClass("highlight");
+    $(this).addClass("highlight");
+  });
 });
