@@ -1,17 +1,15 @@
 $(document).ready(function(){
 	var delayInMilliseconds = 1000; //1 second
+	
 	var delayInMilliseconds2 = 2000; //2 second
-	var delayInMilliseconds3 = 3000; //2 second
 	$('#videoPlayer').hide();
 	$("#fullscreen").click(function() {
 		$('.transform').toggleClass('transform-active');
 		setTimeout(function() {
 			$('#videoPlayer').show();
-		  }, delayInMilliseconds3);
-
-		setTimeout(function() {
-			videoPlayer.webkitEnterFullscreen() 
 		  }, delayInMilliseconds2);
+
+		
 		  
 		  setTimeout(function() {
 			videoPlayer.play();

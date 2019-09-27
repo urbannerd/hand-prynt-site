@@ -1,16 +1,14 @@
 $(document).ready(function () {
-  $('#toggle-mobile').click(function() {
-    $('#overlay').toggleClass('open'); 
-   });
-  
   $('#toggle').click(function() {
+    $(this).toggleClass('active');
     $('#overlay').toggleClass('open'); 
    });
 
+
    $('#overlay li').on('click', function(){
-    $(".open").removeClass('open');
-    setTimeout(function(){window.location = window.location}, 3);
-    
+    $("#overlay").hide();
+    $("#toggle").removeClass("active");
+    setTimeout(function(){window.location = window.location}, 1);
 });
 }); // End of use strict
 
