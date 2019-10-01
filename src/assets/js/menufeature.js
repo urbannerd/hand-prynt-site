@@ -5,10 +5,10 @@ $(document).ready(function () {
    });
 
 
-   $('#overlay li').on('click', function(){
+   $('#overlay li overlay-menu').on('click', function(){
     $("#overlay").hide();
     $("#toggle").removeClass("active");
-    setTimeout(function(){window.location = window.location}, 1);
+    
 });
 }); // End of use strict
 

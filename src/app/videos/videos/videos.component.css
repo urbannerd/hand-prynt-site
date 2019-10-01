@@ -1,0 +1,124 @@
+.video_section {
+    margin-top: 8%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .blog-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 69px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: 500;
+    margin-top: 7%;
+    margin-bottom: 2%;
+  }
+
+  .videobox {
+    background:#fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    width:450px;
+    height:440px;
+
+    padding:14px;
+    margin-right:20px;
+    margin-bottom:40px;
+  }
+  
+.videos-grid {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  padding: 3%;
+}
+
+
+.title {
+    padding-top: 5%;
+    color: #000000;
+}
+
+.videos-grid-video {
+position: relative;
+padding-top: 5%;
+}
+
+.videos-grid-video > #video_page_player.has-media-controls-hidden::-webkit-media-controls {
+    display: none;
+}
+
+.videos-grid-video > video {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.video-overlay-play-button {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 10px calc(50% - 50px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    opacity: 0.95;
+    cursor: pointer;
+    background-image: linear-gradient(transparent, #000);
+    transition: opacity 150ms;
+}
+
+.video-overlay-play-button:hover {
+    opacity: 1;
+}
+
+.video-overlay-play-button.is-hidden {
+    display: none;
+}
+
+.play {
+    position: absolute;
+    display: block;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url(https://static1.dmcdn.net/images/home/play.png.v11b2fefa92a0dc9b);
+    height: 36px;
+    left: 50%;
+    margin-left: -18px;
+    margin-top: -18px;
+    top: 50%;
+    width: 36px;
+    z-index: 2;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  
+@media (min-width:1025px) { 
+    
+  
+  }/* big landscape tablets, laptops, and desktops */ 
+  
+@media (min-width:1281px) { 
+  
+  
+  } /* hi-res laptops and desktops */
+  
+  
+@media (min-width:320px)  { 
+
+  } /* smartphones, iPhone, portrait 480x320 phones */ 
+  
+@media (min-width:481px)  { 
+    
+  
+   } /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  
+   
+  @media (min-width:641px)  { 
+    
+  } /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+  
+  
+  @media (min-width:961px)  { 
+    
+  }/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+  

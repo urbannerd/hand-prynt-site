@@ -208,6 +208,11 @@
     
   }
   
+  @font-face {
+    font-family: 'AvenirNextLTPro-Regular';
+    src: url('/assets/fonts/AvenirNextLTPro-Regular.otf') format("otf");;
+  }
+
   .videotitle {
     position: absolute;
     top: 80%;
@@ -217,7 +222,7 @@
     text-align: center;
     white-space: nowrap ;
     transform: translate(-50%, -50%);
-    font-family: 'Arial', Courier, monospace
+    font-family: 'AvenirNextLTPro-Regular';
   }
   
   .play i:hover {
