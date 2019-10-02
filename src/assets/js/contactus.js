@@ -1,50 +1,42 @@
 $(document).ready(function() {
-  $("#submit").click(function(event) {
-    event.preventDefault();
-    console.log("Clicked button");
-
-    var name = $(".name")
-    var namestatusElm = $(".namestatus");
-
-    var email = $(".email")
-    var emailstatusElm = $(".emailstatus");
-    
-    var subject = $(".subject")
-    var subjectstatusElm = $(".subjectstatus");
-
-    var message = $(".message")
-    var messagestatusElm = $(".messagestatus");
-
-    namestatusElm.empty();
-    emailstatusElm.empty();
-    subjectstatusElm.empty();
-    messagestatusElm.empty();
-
-
-
-
-    if(name.length > 5 ) {
-        namestatusElm.append('<div>Name Valid</div>');
-      } else {
-        namestatusElm.append('<div>Please enter a valid name</div>');
-      }
-
-    if(email.length > 5 && email.includes("@") && email.includes('.')) {
-        $(".emailstatus").remove();
-    } else {
-        emailstatusElm.append('<div>Email is not valid</div>');
-    }
-    
-    if (subject.length > 2) {
-      subjectstatusElm.append("<div>Subject is valid</div>");
-    } else {
-      subjectstatusElm.append("<div>Subject is not valid</div>");
-    }
-
-    if (message.length > 20) {
-      messagestatusElm.append("<div>Message is valid</div>");
-    } else {
-      messagestatusElm.append("<div>Message is not valid</div>");
-    }
-  });
+    $(function() {
+        // init the validator
+        // validator files are included in the download package
+        // otherwise download from http://1000hz.github.io/bootstrap-validator
+      
+        $("#contact-form").validator();
+      
+        // when the form is submitted
+        $("#contact-form").on("submit", function(e) {
+          // if the validator does not prevent form submit
+          if (!e.isDefaultPrevented()) {
+            var url = "contact.php";
+      
+            // FOR CODEPEN DEMO I WILL PROVIDE THE DEMO OUTPUT HERE, download the PHP files from
+            // https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form
+      
+            var messageAlert = "alert-success";
+            var messageText =
+              "Your message was sent, thank you. I will get back to you soon.";
+      
+            // let's compose Bootstrap alert box HTML
+            var alertBox =
+              '<div class="alert ' +
+              messageAlert +
+              ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
+              messageText +
+              "</div>";
+      
+            // If we have messageAlert and messageText
+            if (messageAlert && messageText) {
+              // inject the alert to .messages div in our form
+              $("#contact-form").find(".messages").html(alertBox);
+              // empty the form
+              $("#contact-form")[0].reset();
+            }
+      
+            return false;
+          }
+        });
+      });
 });
