@@ -1,149 +1,19 @@
 .contact_section {
-    margin-top: 7%;
-    width: 100%;
-    height: 100%;
+  width:100%;
+	min-height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
 
-#success-message {
-    opacity: 0;
-  }
-  
-  .col-xs-12.col-sm-12.col-md-12.col-lg-12 {
-    padding: 0 20% 0 20%;
-  }
-  
-  .margin-top-25 {
-    margin-top: 25px;
-  }
-  
-  .form-title {
-    padding: 25px;
-    font-size: 30px;
-    font-weight: 300;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  }
-  
-  .form-group .form-control {
-    -webkit-box-shadow: none;
-    border-bottom: 1px;
-    border-style: none none solid none;
-    border-radius:0; 
-    border-color: #000;
-  }
-  
-  .form-group .form-control:focus {
-      box-shadow: none;
-    border-width: 0 0 2px 0;
-    border-color: #000;
-    
-  }
-  
-  textarea {
-    resize: none;
-  }
-  
-  .btn-mod.btn-large {
-      height: auto;
-      padding: 13px 52px;
-      font-size: 15px;
-  }
-  
-  .btn-mod.btn-border {
-      color: #000000;
-      border: 1px solid #000000;
-      background: transparent;
-  }
-  
-  .namestatus { color: red;
-                
-  }
-  .emailstatus { color: red;
-  }
-  .subjectstatus { color: red;
-  }
-  .messagestatus { color: red;
-  }
-
-  .btn-mod, a.btn-mod {
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 4px 13px;
-      color: #fff;
-      background: rgba(34,34,34, .9);
-      border: 1px solid transparent;
-      font-size: 11px;
-      font-weight: 400;
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: 2px;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      box-shadow: none;
-      -webkit-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-      -moz-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-      -o-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-      -ms-transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-      transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-  }
-  
-  .btn-mod.btn-border:hover, .btn-mod.btn-border:active, .btn-mod.btn-border:focus, .btn-mod.btn-border:active:focus {
-      color: #fff;
-      border-color: #000;
-      background: #000;
-      outline: none;
-  }
-  
-  @media only screen and (max-width: 500px) {
-      .btn-mod.btn-large {
-         padding: 6px 16px;
-         font-size: 11px;
-      }
-    
-      .form-title {
-          font-size: 20px;
-    }
-  }
-  
-
-@media (min-width:1025px) { 
-
-  
-  
-  }/* big landscape tablets, laptops, and desktops */ 
-  
-  @media (min-width:1281px) { 
-   
-  
-  } /* hi-res laptops and desktops */
-  
-  
-  @media (min-width:320px)  { 
-
-  } /* smartphones, iPhone, portrait 480x320 phones */ 
-  
-  @media (min-width:481px)  { 
-
-  
-   } /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-  
-   
-  @media (min-width:641px)  { 
-
-  } /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
-  
-  
-  @media (min-width:961px)  { 
-  
-  }/* tablet, landscape iPad, lo-res laptops ands desktops */ 
-
-  .alert{
-    opacity: 0;
-    transition: .5s opacity;
-  }
-  .alertShowed{
-    opacity: 1;
-  }
+.contact_section .center-div {
+  color: #000000;
+	font-family: 'Museo Sans', Avenir, 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 5vmin;
+	text-align: center;
+	font-size: 5vmin; /* If you want to be extra-fancy */
+	line-height: 110%;
+	text-shadow: 0.05em 0.05em 0.1em #fff;
+	text-shadow: 0 0.025em 0.05em rgba(0,0,0,0.75), 0 0.05em 0.1em rgba(0,0,0,0.5);
+}
