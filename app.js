@@ -3,10 +3,12 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
+const formHandler = require('./Routes/formHandler');
+
 const app = express();
 
 // Port Number
-const port = 5000;
+const port = 3000;
 
 // CORS MIddleware
 app.use(cors());
@@ -21,6 +23,8 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
   res.status(200).send('ok');
 });
+
+app.use('/formSubmit', formHandler);
 
 //redirects any other routes that we have not specified
 app.get('*', (req, res) => {

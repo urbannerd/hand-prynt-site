@@ -11,6 +11,7 @@ import { VideosComponent } from './videos/videos/videos.component';
 import { BlogsComponent } from './blogs/blogs/blogs.component';
 import { ContactusComponent } from './contactus/contactus/contactus.component';
 import { AboutusComponent } from './aboutus/aboutus/aboutus.component';
+import { SubmitterService } from './submitter.service';
 
 
 const appRoutes: Routes = [
@@ -40,7 +41,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [SubmitterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
