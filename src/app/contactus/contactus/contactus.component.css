@@ -139,3 +139,11 @@
   @media (min-width:961px)  { 
   
   }/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
+  .alert{
+    opacity: 0;
+    transition: .5s opacity;
+  }
+  .alertShowed{
+    opacity: 1;
+  }

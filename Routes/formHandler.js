@@ -6,6 +6,9 @@ var mailer = require("nodemailer");
 router.post('/', (req, res) => {
     console.log(req.body);
     
+    let body = JSON.stringify(req.body, null, 2)
+    body = body.replace(/\"/g, "");
+
     // Use Smtp Protocol to send Email
     var transporter = mailer.createTransport({
         service: 'gmail',
@@ -16,13 +19,14 @@ router.post('/', (req, res) => {
     });
     
     var mail = {
-        from: "ahmadtawfik.at1@gmail.com",
-        to: "ahmadtawfik.at1@gmail.com",
-        subject: "Send Email Using Node.js",
-        text: "Node.js New world for me",
-        html: "<b>Node.js New world for me</b>"
-    }
-    
+        from: process.env.SENDER_EMAIL,
+        to: [
+            "marcelstefon@gmail.com"
+        ],
+        subject: req.body.subject,
+        text: body
+    }//i can switch to any service provider like outlook or yahoo right?
+    //yes
     transporter.sendMail(mail, function(error, response){
         if(error){
             res.status(500).json({
@@ -36,7 +40,7 @@ router.post('/', (req, res) => {
             console.log("Message sent: ");
         }
         
-        smtpTransport.close();
+        transporter.close();
     });
     
 });

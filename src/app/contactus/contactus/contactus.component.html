@@ -9,10 +9,13 @@
       </div>
 
       <div class="row">
-          <!-- {{msg}} -->
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-            <form id="contact-form" #testForm='ngForm' (ngSubmit)='onSubmit()' role="form">
+            <div class="alert alert-success" role="alert">
+              Thanks for contacting us. We'll get back to you soon.
+            </div>
+
+            <form id="contact-form" #testForm='ngForm' (ngSubmit)='onSubmit(testForm)' role="form">
           
                 <div class="form-group">
                   <label class="form-label" id="nameLabel" for="name"></label>

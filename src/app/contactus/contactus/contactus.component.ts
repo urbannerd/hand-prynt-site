@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SubmitterService } from 'src/app/submitter.service';
-import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contactus',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ContactusComponent implements OnInit {
 
-  constructor(private _service: SubmitterService, private router: Router) { }
+  constructor(private _service: SubmitterService) { }
 
   ngOnInit() {
   }
@@ -21,12 +21,23 @@ export class ContactusComponent implements OnInit {
     message: ''
   };
 
-  onSubmit(){
+  onSubmit(testForm:NgForm){
     this._service.postData(this.contactUsForm).subscribe(
       data => {
-        alert('Thanks for submitting :)');
+        testForm.form.reset();
+        this.contactUsForm.email='';
+        this.contactUsForm.message='';
+        this.contactUsForm.name='';
+        this.contactUsForm.subject='';
+        
+
+        let alert = document.querySelector('.alert').classList.add('alertShowed');
         console.log(data);
-        this.router.navigate(['']);
+        
+        setTimeout(() => {
+          let alert = document.querySelector('.alert').classList.remove('alertShowed');
+          window.location.href = '';
+        }, 3000);
       },
       error => {
         alert('Error happened');
