@@ -1,7 +1,7 @@
 .video_section {
-    margin-top: 8%;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+  
   }
 
   .blog-title {
@@ -103,8 +103,21 @@ padding-top: 5%;
   } /* hi-res laptops and desktops */
   
   
-@media (min-width:320px)  { 
+@media only screen and  (min-width:320px)  { 
+  .video_section {
+    margin-top: 8%;
 
+  }
+
+  .blog-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 9px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: 500;
+    margin-top: 7%;
+    margin-bottom: 2%;
+  }
   } /* smartphones, iPhone, portrait 480x320 phones */ 
   
 @media (min-width:481px)  { 

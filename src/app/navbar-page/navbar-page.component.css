@@ -12,14 +12,6 @@
 
 /* nav bar */
 nav {
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   padding: 0.5rem 1rem;
   position: fixed;
   top: 0;
@@ -172,7 +164,7 @@ nav .button_container {
 
 @font-face {
   font-family: 'AvenirNextLTPro-Regular';
-  src: url('/assets/fonts/AvenirNextLTPro-Regular.otf') format("otf");;
+  src: url('/assets/fonts/AvenirNextLTPro-Regular.otf');
 }
 
 .overlay .overlay-menu {
@@ -182,6 +174,7 @@ nav .button_container {
   transform: translateY(-50%);
   font-size: 28px;
   font-family: 'AvenirNextLTPro-Regular';
+  font-weight: bold;
   font-weight: 400;
   text-align: center;
   z-index: 1;
@@ -214,7 +207,8 @@ nav .button_container {
   color: #000000;
   text-decoration: none;
   overflow: hidden;
-  font-family: 'Arial', Courier, monospace
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: bold;
 }
 
 .overlay ul li a:after {
@@ -290,441 +284,8 @@ nav .button_container {
   }
 }
 
-@media (min-width:1025px) { 
-  .button_container {
-    position: absolute;
-    top: 38px;
-    right: 6%;
-    height: 27px;
-    width: 35px;
-    cursor: pointer;
-    z-index: 1030;
-    transition: opacity 1s ease;
-  }
-  .button_container:hover {
-    opacity: 0.7;
-  }
 
-
-.button_container.active .top {
-  -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
-  -ms-transform: translateY(11px) translateX(0) rotate(45deg);
-  transform: translateY(11px) translateX(0) rotate(45deg);
-  background: rgb(0, 0, 0);
-}
-
-.button_container.active .middle {
-  opacity: 0;
-  background: rgb(0, 0, 0);
-}
-
-.button_container.active .bottom {
-  -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
-  -ms-transform: translateY(-11px) translateX(0) rotate(-45deg);
-  transform: translateY(-11px) translateX(0) rotate(-45deg);
-  background: rgb(0, 0, 0);
-}
-
-.button_container span {
-  background: #000000;
-  border: none;
-  height: 5px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transition: all .35s ease;
-  transition: all .35s ease;
-  cursor: pointer;
-}
-
-.button_container span:nth-of-type(2) {
-  top: 11px;
-  
-}
-
-.button_container span:nth-of-type(3) {
-  top: 22px;
-}
-
-
-
-/* full responsive menu */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  visibility: hidden;
-  z-index: 100;
-  transition: opacity 0.35s, visibility 0.35s, width 0.35s;
-}
-
-.overlay:before {
-  content: '';
-  background: #feeb6a;
-  left: -55%;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  transition: left 1.0s ease;
-}
-.overlay:after {
-  content: '';
-  background: #feeb6a;
-  right: -55%;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  transition: all 1.0s ease;
-}
-
-.overlay.open {
-  /*opacity: 0.9;*/
-  visibility: visible;
-  height: 100%;
-}
-.overlay.open:before {
-  left: 0;
-}
-.overlay.open:after {
-  right: 0;
-}
-.overlay.open li {
-  animation: fadeInRight 0.5s ease forwards;
-  animation-delay: 0.35s;
-}
-.overlay.open li:nth-of-type(2) {
-  animation-delay: 0.45s;
-}
-.overlay.open li:nth-of-type(3) {
-  animation-delay: 0.55s;
-}
-.overlay.open li:nth-of-type(4) {
-  animation-delay: 0.65s;
-}
-.overlay .overlay-menu {
-  position: absolute;
-  height: 30%;
-  top: 47%;
-  transform: translateY(-50%);
-  font-size: 28px;
-  font-family: 'Vollkorn', serif;
-  font-weight: 400;
-  text-align: center;
-  z-index: 1;
-}
-
-.overlay ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  position: relative;
-  height: 100%;
-}
-.overlay ul li {
-  display: block;
-  height: 25%;
-  height: calc(100% / 4);
-  min-height: 50px;
-  position: relative;
-  opacity: 0;
-}
-
-.overlay ul li a:hover {
-  color: white;
-
-}
-
-.overlay ul li a {
-  display: block;
-  position: relative;
-  color: #000000;
-  text-decoration: none;
-  overflow: hidden;
-  font-family: 'Arial', Courier, monospace
-}
-
-.overlay ul li a:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0%;
-  transform: translateX(-50%);
-  height: 3px;
-  background: #000000;
-  transition: 0.35s;
-}
-  
-  nav {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-  }
-
-  .overlay:before {
-    content: '';
-    background: #feeb6a;
-    left: -55%;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    transition: left 1.0s ease;    
-  }
-  
- img.logo-navbar-overlay {
-    width: 4rem !important;
-    height: 4rem !important;
-    top: 45%;
-  }
-
-  .overlay .overlay-menu {
-    position: absolute;
-    height: 30%;
-    top: 35%;
-    transform: translateY(-50%);
-    font-size: 15px;
-    font-family: 'Vollkorn', serif;
-    font-weight: 400;
-    text-align: center;
-    z-index: 1;
-  }
-
-
-}/* big landscape tablets, laptops, and desktops */ 
-
-@media (min-width:1281px) { 
-  .button_container {
-    position: absolute;
-    top: 38px;
-    right: 6%;
-    height: 27px;
-    width: 35px;
-    cursor: pointer;
-    z-index: 1030;
-    transition: opacity 1s ease;
-  }
-  .button_container:hover {
-    opacity: 0.7;
-  }
-
-
-.button_container.active .top {
-  -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
-  -ms-transform: translateY(11px) translateX(0) rotate(45deg);
-  transform: translateY(11px) translateX(0) rotate(45deg);
-  background: rgb(0, 0, 0);
-}
-
-.button_container.active .middle {
-  opacity: 0;
-  background: rgb(0, 0, 0);
-}
-
-.button_container.active .bottom {
-  -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
-  -ms-transform: translateY(-11px) translateX(0) rotate(-45deg);
-  transform: translateY(-11px) translateX(0) rotate(-45deg);
-  background: rgb(0, 0, 0);
-}
-
-.button_container span {
-  background: #000000;
-  border: none;
-  height: 5px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transition: all .35s ease;
-  transition: all .35s ease;
-  cursor: pointer;
-}
-
-.button_container span:nth-of-type(2) {
-  top: 11px;
-  
-}
-
-.button_container span:nth-of-type(3) {
-  top: 22px;
-}
-
-
-
-/* full responsive menu */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  visibility: hidden;
-  z-index: 100;
-  transition: opacity 0.35s, visibility 0.35s, width 0.35s;
-}
-
-.overlay:before {
-  content: '';
-  background: #feeb6a;
-  left: -55%;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  transition: left 1.0s ease;
-}
-.overlay:after {
-  content: '';
-  background: #feeb6a;
-  right: -55%;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  transition: all 1.0s ease;
-}
-
-.overlay.open {
-  /*opacity: 0.9;*/
-  visibility: visible;
-  height: 100%;
-}
-.overlay.open:before {
-  left: 0;
-}
-.overlay.open:after {
-  right: 0;
-}
-.overlay.open li {
-  animation: fadeInRight 0.5s ease forwards;
-  animation-delay: 0.35s;
-}
-.overlay.open li:nth-of-type(2) {
-  animation-delay: 0.45s;
-}
-.overlay.open li:nth-of-type(3) {
-  animation-delay: 0.55s;
-}
-.overlay.open li:nth-of-type(4) {
-  animation-delay: 0.65s;
-}
-.overlay .overlay-menu {
-  position: absolute;
-  height: 30%;
-  top: 47%;
-  transform: translateY(-50%);
-  font-size: 28px;
-  font-family: 'Vollkorn', serif;
-  font-weight: 400;
-  text-align: center;
-  z-index: 1;
-}
-
-.overlay ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  position: relative;
-  height: 100%;
-}
-.overlay ul li {
-  display: block;
-  height: 25%;
-  height: calc(100% / 4);
-  min-height: 50px;
-  position: relative;
-  opacity: 0;
-}
-
-.overlay ul li a:hover {
-  color: white;
-
-}
-
-.overlay ul li a {
-  display: block;
-  position: relative;
-  color: #000000;
-  text-decoration: none;
-  overflow: hidden;
-  font-family: 'Arial', Courier, monospace
-}
-
-.overlay ul li a:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0%;
-  transform: translateX(-50%);
-  height: 3px;
-  background: #000000;
-  transition: 0.35s;
-}
-  
-  nav {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-  }
-  .social__container_mobile {
-    font-size: 1.5em;
-    display: inline-block;
-    padding-left: 15%;
-    padding-top: 50%;
-  }
-
-  .overlay:before {
-    content: '';
-    background: #feeb6a;
-    left: -55%;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    transition: left 1.0s ease;    
-  }
-  
- img.logo-navbar-overlay {
-    width: 4rem !important;
-    height: 4rem !important;
-    top: 45%;
-  }
-
-} /* hi-res laptops and desktops */
-
-
-@media (min-width:320px)  { 
+@media only screen and (min-width:320px)  { 
   nav #brand {
     float: left;
     display: block;
@@ -794,7 +355,7 @@ nav .button_container {
 
 /* full responsive menu */
 .overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -812,7 +373,7 @@ nav .button_container {
   top: 0;
   width: 50%;
   height: 100%;
-  position: absolute;
+  position: relative;
   transition: left 1.0s ease;
 }
 .overlay:after {
@@ -850,13 +411,19 @@ nav .button_container {
 .overlay.open li:nth-of-type(4) {
   animation-delay: 0.65s;
 }
+@font-face {
+  font-family: 'AvenirNextLTPro-Regular';
+  src: url('/assets/fonts/AvenirNextLTPro-Regular.otf');
+}
+
 .overlay .overlay-menu {
   position: absolute;
   height: 30%;
   top: 47%;
   transform: translateY(-50%);
   font-size: 28px;
-  font-family: 'Vollkorn', serif;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: bold;
   font-weight: 400;
   text-align: center;
   z-index: 1;
@@ -889,7 +456,8 @@ nav .button_container {
   color: #000000;
   text-decoration: none;
   overflow: hidden;
-  font-family: 'Arial', Courier, monospace
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: bold;
 }
 
 .overlay ul li a:after {
@@ -904,22 +472,15 @@ nav .button_container {
   transition: 0.35s;
 }
   
-  nav {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-  }
+nav {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  position: fixed;
+  padding: 0.5rem 1rem;
+}
+
   .social__container .mobile{
     font-size: 1.5em;
     display: inline-block;
@@ -938,19 +499,6 @@ nav .button_container {
     transition: left 1.0s ease;    
   }
 
-
-
-  .overlay .overlay-menu {
-    position: absolute;
-    height: 30%;
-    top: 35%;
-    transform: translateY(-50%);
-    font-size: 15px;
-    font-family: 'Vollkorn', serif;
-    font-weight: 400;
-    text-align: center;
-    z-index: 1;
-  }
   
  img.logo-navbar-overlay {
     width: 4rem !important;
@@ -959,7 +507,7 @@ nav .button_container {
   }
 } /* smartphones, iPhone, portrait 480x320 phones */ 
 
-@media (min-width:481px)  { 
+@media only screen and (min-width:1025px) { 
   .button_container {
     position: absolute;
     top: 38px;
@@ -1076,13 +624,20 @@ nav .button_container {
 .overlay.open li:nth-of-type(4) {
   animation-delay: 0.65s;
 }
+
+@font-face {
+  font-family: 'AvenirNextLTPro-Regular';
+  src: url('/assets/fonts/AvenirNextLTPro-Regular.otf');
+}
+
 .overlay .overlay-menu {
   position: absolute;
   height: 30%;
   top: 47%;
   transform: translateY(-50%);
   font-size: 28px;
-  font-family: 'Vollkorn', serif;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: bold;
   font-weight: 400;
   text-align: center;
   z-index: 1;
@@ -1115,7 +670,8 @@ nav .button_container {
   color: #000000;
   text-decoration: none;
   overflow: hidden;
-  font-family: 'Arial', Courier, monospace
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: bold;
 }
 
 .overlay ul li a:after {
@@ -1130,22 +686,404 @@ nav .button_container {
   transition: 0.35s;
 }
   
-  nav {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
+nav {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  position: fixed;
+  padding: 0.5rem 1rem;
+}
+  
+ img.logo-navbar-overlay {
+    width: 4rem !important;
+    height: 4rem !important;
+    top: 45%;
   }
+
+}/* big landscape tablets, laptops, and desktops */ 
+
+@media only screen and (min-width:1281px) { 
+  .button_container {
+    position: absolute;
+    top: 38px;
+    right: 6%;
+    height: 27px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 1030;
+    transition: opacity 1s ease;
+  }
+  .button_container:hover {
+    opacity: 0.7;
+  }
+
+
+.button_container.active .top {
+  -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+  -ms-transform: translateY(11px) translateX(0) rotate(45deg);
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: rgb(0, 0, 0);
+}
+
+.button_container.active .middle {
+  opacity: 0;
+  background: rgb(0, 0, 0);
+}
+
+.button_container.active .bottom {
+  -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+  -ms-transform: translateY(-11px) translateX(0) rotate(-45deg);
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: rgb(0, 0, 0);
+}
+
+.button_container span {
+  background: #000000;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+  cursor: pointer;
+}
+
+.button_container span:nth-of-type(2) {
+  top: 11px;
+  
+}
+
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+
+
+/* full responsive menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: hidden;
+  z-index: 100;
+  transition: opacity 0.35s, visibility 0.35s, width 0.35s;
+}
+
+.overlay:before {
+  content: '';
+  background: #feeb6a;
+  left: -55%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  transition: left 1.0s ease;
+}
+.overlay:after {
+  content: '';
+  background: #feeb6a;
+  right: -55%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  transition: all 1.0s ease;
+}
+
+.overlay.open {
+  /*opacity: 0.9;*/
+  visibility: visible;
+  height: 100%;
+}
+.overlay.open:before {
+  left: 0;
+}
+.overlay.open:after {
+  right: 0;
+}
+.overlay.open li {
+  animation: fadeInRight 0.5s ease forwards;
+  animation-delay: 0.35s;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: 0.45s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: 0.55s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: 0.65s;
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro-Regular';
+  src: url('/assets/fonts/AvenirNextLTPro-Regular.otf');
+}
+
+.overlay .overlay-menu {
+  position: absolute;
+  height: 30%;
+  top: 47%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: bold;
+  font-weight: 400;
+  text-align: center;
+  z-index: 1;
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+
+.overlay ul li a:hover {
+  color: white;
+
+}
+
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #000000;
+  text-decoration: none;
+  overflow: hidden;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: bold;
+}
+
+.overlay ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #000000;
+  transition: 0.35s;
+}
+  
+nav {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  position: fixed;
+  padding: 0.5rem 1rem;
+}
+
+  .social__container_mobile {
+    font-size: 1.5em;
+    display: inline-block;
+    padding-left: 15%;
+    padding-top: 50%;
+  }
+  
+ img.logo-navbar-overlay {
+    width: 4rem !important;
+    height: 4rem !important;
+    top: 45%;
+  }
+
+} /* hi-res laptops and desktops */
+
+@media only screen and (min-width:481px)  { 
+  .button_container {
+    position: absolute;
+    top: 38px;
+    right: 6%;
+    height: 27px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 1030;
+    transition: opacity 1s ease;
+  }
+  .button_container:hover {
+    opacity: 0.7;
+  }
+
+
+.button_container.active .top {
+  -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+  -ms-transform: translateY(11px) translateX(0) rotate(45deg);
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: rgb(0, 0, 0);
+}
+
+.button_container.active .middle {
+  opacity: 0;
+  background: rgb(0, 0, 0);
+}
+
+.button_container.active .bottom {
+  -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+  -ms-transform: translateY(-11px) translateX(0) rotate(-45deg);
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: rgb(0, 0, 0);
+}
+
+.button_container span {
+  background: #000000;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+  cursor: pointer;
+}
+
+.button_container span:nth-of-type(2) {
+  top: 11px;
+  
+}
+
+.button_container span:nth-of-type(3) {
+  top: 22px;
+}
+
+
+
+/* full responsive menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: hidden;
+  z-index: 100;
+  transition: opacity 0.35s, visibility 0.35s, width 0.35s;
+}
+
+
+.overlay:after {
+  content: '';
+  background: #feeb6a;
+  right: -55%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  transition: all 1.0s ease;
+}
+
+.overlay.open {
+  /*opacity: 0.9;*/
+  visibility: visible;
+  height: 100%;
+}
+.overlay.open:before {
+  left: 0;
+}
+.overlay.open:after {
+  right: 0;
+}
+.overlay.open li {
+  animation: fadeInRight 0.5s ease forwards;
+  animation-delay: 0.35s;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: 0.45s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: 0.55s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: 0.65s;
+}
+@font-face {
+  font-family: 'AvenirNextLTPro-Regular';
+  src: url('/assets/fonts/AvenirNextLTPro-Regular.otf');
+}
+
+.overlay .overlay-menu {
+  position: absolute;
+  height: 30%;
+  top: 47%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: bold;
+  font-weight: 400;
+  text-align: center;
+  z-index: 1;
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+
+.overlay ul li a:hover {
+  color: white;
+
+}
+
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #000000;
+  text-decoration: none;
+  overflow: hidden;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: bold;
+}
+
+.overlay ul li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #000000;
+  transition: 0.35s;
+}
+  
+nav {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  position: fixed;
+  padding: 0.5rem 1rem;
+}
+
   .social__container_mobile {
     font-size: 1.5em;
     display: inline-block;
@@ -1173,7 +1111,7 @@ nav .button_container {
  } /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 
  
-@media (min-width:641px)  { 
+@media only screen and (min-width:641px)  { 
   .button_container {
     position: absolute;
     top: 38px;
@@ -1290,13 +1228,19 @@ nav .button_container {
 .overlay.open li:nth-of-type(4) {
   animation-delay: 0.65s;
 }
+@font-face {
+  font-family: 'AvenirNextLTPro-Regular';
+  src: url('/assets/fonts/AvenirNextLTPro-Regular.otf');
+}
+
 .overlay .overlay-menu {
   position: absolute;
   height: 30%;
   top: 47%;
   transform: translateY(-50%);
   font-size: 28px;
-  font-family: 'Vollkorn', serif;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: bold;
   font-weight: 400;
   text-align: center;
   z-index: 1;
@@ -1329,7 +1273,8 @@ nav .button_container {
   color: #000000;
   text-decoration: none;
   overflow: hidden;
-  font-family: 'Arial', Courier, monospace
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: bold;
 }
 
 .overlay ul li a:after {
@@ -1344,22 +1289,14 @@ nav .button_container {
   transition: 0.35s;
 }
   
-  nav {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-  }
+nav {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  position: fixed;
+  padding: 0.5rem 1rem;
+}
 
   nav #brand {
     float: left;
@@ -1377,16 +1314,6 @@ nav .button_container {
     padding-top: 50%;
   }
 
-  .overlay:before {
-    content: '';
-    background: #feeb6a;
-    left: -55%;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    transition: left 1.0s ease;    
-  }
   
  img.logo-navbar-overlay {
     width: 4rem !important;
@@ -1396,7 +1323,7 @@ nav .button_container {
 } /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
 
 
-@media (min-width:961px)  { 
+@media only screen and (min-width:961px)  { 
   .button_container {
     position: absolute;
     top: 38px;
@@ -1513,13 +1440,19 @@ nav .button_container {
 .overlay.open li:nth-of-type(4) {
   animation-delay: 0.65s;
 }
+@font-face {
+  font-family: 'AvenirNextLTPro-Regular';
+  src: url('/assets/fonts/AvenirNextLTPro-Regular.otf');
+}
+
 .overlay .overlay-menu {
   position: absolute;
   height: 30%;
   top: 47%;
   transform: translateY(-50%);
   font-size: 28px;
-  font-family: 'Vollkorn', serif;
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: bold;
   font-weight: 400;
   text-align: center;
   z-index: 1;
@@ -1552,7 +1485,8 @@ nav .button_container {
   color: #000000;
   text-decoration: none;
   overflow: hidden;
-  font-family: 'Arial', Courier, monospace
+  font-family: 'AvenirNextLTPro-Regular';
+  font-weight: bold;
 }
 
 .overlay ul li a:after {
@@ -1568,37 +1502,19 @@ nav .button_container {
 }
   
   nav {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1000;
+    position: fixed;
+    padding: 0.5rem 1rem;
   }
+
   .social__container_mobile {
     font-size: 1.5em;
     display: inline-block;
     padding-left: 15%;
     padding-top: 50%;
-  }
-
-  .overlay:before {
-    content: '';
-    background: #feeb6a;
-    left: -55%;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    transition: left 1.0s ease;    
   }
   
  img.logo-navbar-overlay {
