@@ -1,10 +1,11 @@
 $(document).ready(function(){
 	var delayInMilliseconds = 1000; //1 second
-	
 	var delayInMilliseconds2 = 2000; //2 second
+
 	$('#videoPlayer').hide();
 	$("#fullscreen").click(function() {
 		$('.transform').toggleClass('transform-active');
+		$(".navbar-fixed-top").hide()
 		setTimeout(function() {
 			$('#videoPlayer').show();
 		  }, delayInMilliseconds2);
@@ -18,6 +19,7 @@ $(document).ready(function(){
 	  
 	  $('.close').click(function() {
 		$('.transform').toggleClass('transform-active');
+		$(".navbar-fixed-top").show()
 		$('#videoPlayer').hide();
 		videoPlayer.pause()
 	});
