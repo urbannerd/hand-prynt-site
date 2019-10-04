@@ -1,6 +1,9 @@
 $(document).ready(function () {
+  var $nav = $(".navbar-fixed-top");
+
   $('#toggle').click(function() {
     $(this).toggleClass('active');
+    $nav.removeClass('scrolled', $(this).scrollTop() > $nav.height());
     $('#overlay').toggleClass('open'); 
    });
 
@@ -9,6 +12,12 @@ $(document).ready(function () {
     $("#overlay").hide();
     $("#toggle").removeClass("active");
     
+});
+
+
+$(document).scroll(function () {
+  var $nav = $(".navbar-fixed-top");
+  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
 });
 }); // End of use strict
 
