@@ -11,6 +11,7 @@ import { VideosComponent } from './videos/videos/videos.component';
 import { BlogsComponent } from './blogs/blogs/blogs.component';
 import { ContactusComponent } from './contactus/contactus/contactus.component';
 import { AboutusComponent } from './aboutus/aboutus/aboutus.component';
+import { FirstaComponent } from './blogs/blogs/articles/firsta/firsta.component';
 
 
 
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
   { path: 'blogs', component: BlogsComponent},
   { path: 'videos', component: VideosComponent},
   { path: 'aboutus', component: AboutusComponent},
-  { path: 'contactus', component: ContactusComponent}
+  { path: 'contactus', component: ContactusComponent},
+  { path: 'firsta', component: FirstaComponent}
 ];
 
 
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
     VideosComponent,
     BlogsComponent,
     ContactusComponent,
-    AboutusComponent
+    AboutusComponent,
+    FirstaComponent
 
   ],
   imports: [
