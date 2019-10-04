@@ -9,6 +9,11 @@
   }
   
 
+  .section .scrollDisable{
+    overflow-y:hidden;
+    overflow-x:hidden;
+  }
+
   .video-wrapper {
     position: relative;
     padding-bottom: 25%;

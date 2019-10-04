@@ -14,11 +14,12 @@
   font-family: 'AvenirNextLTPro-Regular';
   font-weight: bold;
   font-weight: 400;
-  font-size: 5vw;
+  font-size: 4vw;
   color: rgb(0, 0, 0);
   font-weight: 500;
   margin-top: 10%;
   margin-bottom: 8%;
+  margin-left: 30px;
 }
 
 button:focus {
@@ -153,7 +154,7 @@ img {
     font-size: 5vw;
     color: rgb(0, 0, 0);
     font-weight: 500;
-    margin-top: 20%;
+    margin-top: 10%;
     margin-bottom: 8%;
   }
   
@@ -282,12 +283,11 @@ img {
   .blog-title {
     font-family: 'AvenirNextLTPro-Regular';
     font-weight: bold;
-    font-weight: 400;
-    font-size: 5vw;
+    font-size: 8vw;
     color: rgb(0, 0, 0);
-    font-weight: 500;
-    margin-top: 50%;
-    margin-bottom: 8%;
+    margin-top: 35%;
+    margin-right: 40px;
+   
   }
   
   button:focus {
@@ -300,11 +300,9 @@ img {
   }
   
   .filter-button {
-    font-size: 18px;
+    font-size: 19px;
     color: #b6b6b6;
-    margin-right: 6px;
-    padding: 4px 15px;
-    display: inline-block;
+    display: block;
   }
   
   .highlight {
@@ -538,8 +536,6 @@ img {
 
 
 @media only screen and (min-width:961px)  { 
-  * {box-sizing: border-box;}
-
   .section {
     width: 100%;
     height: 100%;
@@ -634,12 +630,13 @@ img {
     padding: 0;
   }
   
+  
   .cards_item {
     display: flex;
     padding: 1rem;
   }
   
-
+  
   
   .card {
     background-color: white;
@@ -676,8 +673,6 @@ img {
   
 
 @media only screen and (min-width:1025px) { 
-  * {box-sizing: border-box;}
-
   .section {
     width: 100%;
     height: 100%;
@@ -694,11 +689,12 @@ img {
     font-family: 'AvenirNextLTPro-Regular';
     font-weight: bold;
     font-weight: 400;
-    font-size: 5vw;
+    font-size: 4vw;
     color: rgb(0, 0, 0);
     font-weight: 500;
     margin-top: 10%;
     margin-bottom: 8%;
+    margin-left: 30px;
   }
   
   button:focus {
@@ -772,12 +768,13 @@ img {
     padding: 0;
   }
   
+  
   .cards_item {
     display: flex;
     padding: 1rem;
   }
   
-
+  
   
   .card {
     background-color: white;
@@ -809,12 +806,9 @@ img {
     margin-bottom: 1.25rem;    
     font-weight: 400;
   }
-
 }/* big landscape tablets, laptops, and desktops */ 
 
 @media only screen and (min-width:1281px) { 
-  * {box-sizing: border-box;}
-
   .section {
     width: 100%;
     height: 100%;
@@ -831,13 +825,13 @@ img {
     font-family: 'AvenirNextLTPro-Regular';
     font-weight: bold;
     font-weight: 400;
-    font-size: 5vw;
+    font-size: 4vw;
     color: rgb(0, 0, 0);
     font-weight: 500;
     margin-top: 10%;
     margin-bottom: 8%;
+    margin-left: 30px;
   }
-  
   button:focus {
     outline: none;
     box-shadow: none;
@@ -909,12 +903,13 @@ img {
     padding: 0;
   }
   
+  
   .cards_item {
     display: flex;
     padding: 1rem;
   }
   
-
+  
   
   .card {
     background-color: white;
