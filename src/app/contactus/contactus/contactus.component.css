@@ -20,6 +20,34 @@
   text-decoration: none;
 }
 
+.fa-envelope {
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  height:1rem;
+font-size: 1.25em;
+line-height: 110%;
+  margin: auto;
+  position: relative;
+}
+
+.blink {
+  animation: blink 2s steps(5, start) infinite;
+  -webkit-animation: blink 1s steps(5, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+
 @media only screen and (min-width: 320px) {
   @font-face {
     font-family: "AvenirNextLTPro-Regular";
@@ -47,6 +75,33 @@
     text-shadow: 0 0.025em 0.05em rgba(0, 0, 0, 0.75),
       0 0.05em 0.1em rgba(0, 0, 0, 0.5);
     text-decoration: none;
+  }
+
+  .fa-envelope {
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    height:1rem;
+  font-size: 1.25em;
+  line-height: 110%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .blink {
+    animation: blink 2s steps(5, start) infinite;
+    -webkit-animation: blink 1s steps(5, start) infinite;
+  }
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink {
+    to {
+      visibility: hidden;
+    }
   }
 } /* smartphones, iPhone, portrait 480x320 phones */
 
@@ -78,6 +133,33 @@
       0 0.05em 0.1em rgba(0, 0, 0, 0.5);
     text-decoration: none;
   }
+
+  .fa-envelope {
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    height:1rem;
+  font-size: 1.25em;
+  line-height: 110%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .blink {
+    animation: blink 2s steps(5, start) infinite;
+    -webkit-animation: blink 1s steps(5, start) infinite;
+  }
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
 } /* smartphones, iPhone, portrait 480x320 phones */
 
 @media only screen and (min-width: 375px) and (min-height: 812px) {
@@ -107,6 +189,33 @@
     text-shadow: 0 0.025em 0.05em rgba(0, 0, 0, 0.75),
       0 0.05em 0.1em rgba(0, 0, 0, 0.5);
     text-decoration: none;
+  }
+
+  .fa-envelope {
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    height:1rem;
+  font-size: 1.25em;
+  line-height: 110%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .blink {
+    animation: blink 2s steps(5, start) infinite;
+    -webkit-animation: blink 1s steps(5, start) infinite;
+  }
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink {
+    to {
+      visibility: hidden;
+    }
   }
 } /* smartphones, iPhone, portrait 480x320 phones */
 
@@ -138,6 +247,33 @@
       0 0.05em 0.1em rgba(0, 0, 0, 0.5);
     text-decoration: none;
   }
+
+  .fa-envelope {
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    height:1rem;
+  font-size: 1.25em;
+  line-height: 110%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .blink {
+    animation: blink 2s steps(5, start) infinite;
+    -webkit-animation: blink 1s steps(5, start) infinite;
+  }
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
 } /* smartphones, iPhone, portrait 480x320 phones */
 
 @media only screen and (min-width: 481px) {
@@ -167,6 +303,33 @@
     text-shadow: 0 0.025em 0.05em rgba(0, 0, 0, 0.75),
       0 0.05em 0.1em rgba(0, 0, 0, 0.5);
     text-decoration: none;
+  }
+
+  .fa-envelope {
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    height:1rem;
+  font-size: 1.25em;
+  line-height: 110%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .blink {
+    animation: blink 2s steps(5, start) infinite;
+    -webkit-animation: blink 1s steps(5, start) infinite;
+  }
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink {
+    to {
+      visibility: hidden;
+    }
   }
 } /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 
@@ -198,6 +361,33 @@
       0 0.05em 0.1em rgba(0, 0, 0, 0.5);
     text-decoration: none;
   }
+
+  .fa-envelope {
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    height:1rem;
+  font-size: 1.25em;
+  line-height: 110%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .blink {
+    animation: blink 2s steps(5, start) infinite;
+    -webkit-animation: blink 1s steps(5, start) infinite;
+  }
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
 } /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 
 @media only screen and (min-width: 961px) {
@@ -227,6 +417,32 @@
     text-shadow: 0 0.025em 0.05em rgba(0, 0, 0, 0.75),
       0 0.05em 0.1em rgba(0, 0, 0, 0.5);
     text-decoration: none;
+  }
+  .fa-envelope {
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    height:1rem;
+  font-size: 1.25em;
+  line-height: 110%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .blink {
+    animation: blink 2s steps(5, start) infinite;
+    -webkit-animation: blink 1s steps(5, start) infinite;
+  }
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink {
+    to {
+      visibility: hidden;
+    }
   }
 } /* tablet, landscape iPad, lo-res laptops ands desktops */
 
@@ -258,6 +474,32 @@
       0 0.05em 0.1em rgba(0, 0, 0, 0.5);
     text-decoration: none;
   }
+  .fa-envelope {
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    height:1rem;
+  font-size: 1.25em;
+  line-height: 110%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .blink {
+    animation: blink 2s steps(5, start) infinite;
+    -webkit-animation: blink 1s steps(5, start) infinite;
+  }
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
 } /* big landscape tablets, laptops, and desktops */
 
 @media only screen and (min-width: 1281px) {
@@ -287,5 +529,31 @@
     text-shadow: 0 0.025em 0.05em rgba(0, 0, 0, 0.75),
       0 0.05em 0.1em rgba(0, 0, 0, 0.5);
     text-decoration: none;
+  }
+  .fa-envelope {
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    height:1rem;
+  font-size: 1.25em;
+  line-height: 110%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .blink {
+    animation: blink 2s steps(5, start) infinite;
+    -webkit-animation: blink 1s steps(5, start) infinite;
+  }
+  @keyframes blink {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink {
+    to {
+      visibility: hidden;
+    }
   }
 } /* hi-res laptops and desktops */

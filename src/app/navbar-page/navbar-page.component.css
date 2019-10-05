@@ -243,10 +243,10 @@ nav .button_container {
   content: "\f16d";
 }
 .social__icon--instagram {
-  background-color: #6291b2;
+  background-image: linear-gradient(to right,#8a3ab9, #bc2a8d,#fccc63);
 }
 .social__icon--instagram:hover {
-  background-color: #537b97;
+  background-image: linear-gradient(to left,#8a3ab9, #bc2a8d,#fccc63);
 }
 .social__item_mobile {
   display: inline-block;
