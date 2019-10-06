@@ -5,6 +5,10 @@
  
   }
 
+  @font-face {
+    font-family: 'AvenirNextLTPro-Regular';
+    src: url('/assets/fonts/AvenirNextLTPro-Regular.otf');
+  }
 
   .test {
     width: 800px;
@@ -14,6 +18,7 @@
     text-align: center;
   }
   .test p {
+    font-family: 'AvenirNextLTPro-Regular';
     font-size: 50px;
     color: #cbd440;
     text-transform: uppercase;

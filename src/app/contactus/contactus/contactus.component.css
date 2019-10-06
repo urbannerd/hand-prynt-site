@@ -6,9 +6,15 @@
   align-items: center;
 }
 
+@font-face {
+  font-family: "AvenirNextLTPro-Regular";
+  src: url("/assets/fonts/AvenirNextLTPro-Regular.otf");
+}
+
+
 .contact_section .center-div {
   color: #000000;
-  font-family: "Museo Sans", Avenir, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: 'AvenirNextLTPro-Regular';
   font-weight: 900;
   font-size: 5vmin;
   text-align: center;

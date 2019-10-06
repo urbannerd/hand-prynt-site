@@ -32,6 +32,7 @@ button:focus {
 }
 
 .filter-button {
+  font-family: 'AvenirNextLTPro-Regular';
   font-size: 18px;
   color: #b6b6b6;
   margin-right: 6px;
@@ -55,6 +56,7 @@ button:focus {
 
 
 h1 {
+  font-family: 'AvenirNextLTPro-Regular';
     font-size: 24px;
     font-weight: 400;
     text-align: center;
@@ -67,7 +69,8 @@ img {
 }
 
 .btn_card  {
-  color: #ffffff;
+  font-family: 'AvenirNextLTPro-Regular';
+  color: #000000;
   padding: 0.8rem;
   font-size: 14px;
   text-transform: uppercase;
@@ -76,12 +79,13 @@ img {
   display: block;
   width: 100%;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   background: transparent;
 }
 
-.btn_card :hover {
-  background-color: rgba(255, 255, 255, 0.12);
+.btn_card:hover {
+  color: #b6b6b6;
+  font-size: 16px;
 }
 
 .cards {
@@ -112,11 +116,12 @@ img {
 
 .card_content {
   padding: 1rem;
-  background: linear-gradient(to bottom left, rgb(163, 163, 163) 40%, rgb(228, 228, 228) 100%);
+  background: linear-gradient(to bottom left, rgb(255,250,250) 40%, rgb(255, 255, 255) 100%);
 }
 
 .card_title {
-  color: #ffffff;
+  font-family: 'AvenirNextLTPro-Regular';
+  color: #b6b6b6;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -125,7 +130,8 @@ img {
 }
 
 .card_text {
-  color: #ffffff;
+  font-family: 'AvenirNextLTPro-Regular';
+  color: #000000;
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;    
@@ -154,7 +160,7 @@ img {
     font-size: 7vw;
     color: rgb(0, 0, 0);
     font-weight: 500;
-    margin-top: 35%;
+    margin-top: 40%;
     margin-bottom: 1%;
   }
   
@@ -200,7 +206,8 @@ img {
 }
 
 .btn_card  {
-  color: #ffffff;
+  font-family: 'AvenirNextLTPro-Regular';
+  color: #000000;
   padding: 0.8rem;
   font-size: 14px;
   text-transform: uppercase;
@@ -209,21 +216,24 @@ img {
   display: block;
   width: 100%;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   background: transparent;
 }
 
-.btn_card :hover {
-  background-color: rgba(255, 255, 255, 0.12);
+.btn_card:hover {
+  color: #b6b6b6;
+  font-size: 16px;
 }
 
 .cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr ;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 
 .cards_item {
   display: flex;
@@ -243,11 +253,12 @@ img {
 
 .card_content {
   padding: 1rem;
-  background: linear-gradient(to bottom left, rgb(163, 163, 163) 40%, rgb(228, 228, 228) 100%);
+  background: linear-gradient(to bottom left, rgb(255,250,250) 40%, rgb(255, 255, 255) 100%);
 }
 
 .card_title {
-  color: #ffffff;
+  font-family: 'AvenirNextLTPro-Regular';
+  color: #b6b6b6;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -256,7 +267,8 @@ img {
 }
 
 .card_text {
-  color: #ffffff;
+  font-family: 'AvenirNextLTPro-Regular';
+  color: #000000;
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;    
@@ -265,7 +277,7 @@ img {
 
 } /* smartphones, iPhone, portrait 480x320 phones */ 
 
-@media only screen and (min-width:375px) { 
+@media only screen and (min-width:375px) and (min-height:812px)  { 
   .section {
     width: 100%;
     height: 100%;
@@ -330,7 +342,8 @@ img {
 }
 
 .btn_card  {
-  color: #ffffff;
+  font-family: 'AvenirNextLTPro-Regular';
+  color: #000000;
   padding: 0.8rem;
   font-size: 14px;
   text-transform: uppercase;
@@ -339,21 +352,24 @@ img {
   display: block;
   width: 100%;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   background: transparent;
 }
 
-.btn_card :hover {
-  background-color: rgba(255, 255, 255, 0.12);
+.btn_card:hover {
+  color: #b6b6b6;
+  font-size: 16px;
 }
 
 .cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 
 .cards_item {
   display: flex;
@@ -373,11 +389,12 @@ img {
 
 .card_content {
   padding: 1rem;
-  background: linear-gradient(to bottom left, rgb(163, 163, 163) 40%, rgb(228, 228, 228) 100%);
+  background: linear-gradient(to bottom left, rgb(255,250,250) 40%, rgb(255, 255, 255) 100%);
 }
 
 .card_title {
-  color: #ffffff;
+  font-family: 'AvenirNextLTPro-Regular';
+  color: #b6b6b6;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -386,7 +403,8 @@ img {
 }
 
 .card_text {
-  color: #ffffff;
+  font-family: 'AvenirNextLTPro-Regular';
+  color: #000000;
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;    
@@ -395,6 +413,141 @@ img {
     
 } /* smartphones, iPhone, portrait 480x320 phones */ 
 
+@media only screen and (min-width:360px) and (min-height:640px)  { 
+  .section {
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  @font-face {
+    font-family: 'AvenirNextLTPro-Regular';
+    src: url('/assets/fonts/AvenirNextLTPro-Regular.otf');
+  }
+  
+  
+  .blog-title {
+    font-family: 'AvenirNextLTPro-Regular';
+    font-weight: bold;
+    font-size: 7vw;
+    color: rgb(0, 0, 0);
+    margin-top: 35%;
+    margin-left: 10px;
+   
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .portfolioFilter {
+    padding: 30px 0;
+  }
+  
+  .filter-button {
+    font-size: 19px;
+    color: #b6b6b6;
+    display: block;
+  }
+  
+  .highlight {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #000000;
+  }
+
+   /* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn_card  {
+  font-family: 'AvenirNextLTPro-Regular';
+  color: #000000;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: transparent;
+}
+
+.btn_card:hover {
+  color: #b6b6b6;
+  font-size: 16px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, rgb(255,250,250) 40%, rgb(255, 255, 255) 100%);
+}
+
+.card_title {
+  font-family: 'AvenirNextLTPro-Regular';
+  color: #b6b6b6;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  font-family: 'AvenirNextLTPro-Regular';
+  color: #000000;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+    
+} /* smartphones, iPhone, portrait 480x320 phones */ 
 
 @media only screen and (min-width:481px)  { 
 
@@ -464,7 +617,8 @@ img {
   }
   
   .btn_card  {
-    color: #ffffff;
+    font-family: 'AvenirNextLTPro-Regular';
+    color: #000000;
     padding: 0.8rem;
     font-size: 14px;
     text-transform: uppercase;
@@ -473,28 +627,31 @@ img {
     display: block;
     width: 100%;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     background: transparent;
   }
   
-  .btn_card :hover {
-    background-color: rgba(255, 255, 255, 0.12);
+  .btn_card:hover {
+    color: #b6b6b6;
+    font-size: 16px;
   }
   
   .cards {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
   
   .cards_item {
     display: flex;
     padding: 1rem;
   }
   
-
+  
   
   .card {
     background-color: white;
@@ -507,11 +664,12 @@ img {
   
   .card_content {
     padding: 1rem;
-    background: linear-gradient(to bottom left, rgb(163, 163, 163) 40%, rgb(228, 228, 228) 100%);
+    background: linear-gradient(to bottom left, rgb(255,250,250) 40%, rgb(255, 255, 255) 100%);
   }
   
   .card_title {
-    color: #ffffff;
+    font-family: 'AvenirNextLTPro-Regular';
+    color: #b6b6b6;
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -520,7 +678,8 @@ img {
   }
   
   .card_text {
-    color: #ffffff;
+    font-family: 'AvenirNextLTPro-Regular';
+    color: #000000;
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 1.25rem;    
@@ -599,7 +758,8 @@ img {
   }
   
   .btn_card  {
-    color: #ffffff;
+    font-family: 'AvenirNextLTPro-Regular';
+    color: #000000;
     padding: 0.8rem;
     font-size: 14px;
     text-transform: uppercase;
@@ -608,12 +768,13 @@ img {
     display: block;
     width: 100%;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     background: transparent;
   }
   
-  .btn_card :hover {
-    background-color: rgba(255, 255, 255, 0.12);
+  .btn_card:hover {
+    color: #b6b6b6;
+    font-size: 16px;
   }
   
   .cards {
@@ -644,11 +805,12 @@ img {
   
   .card_content {
     padding: 1rem;
-    background: linear-gradient(to bottom left, rgb(163, 163, 163) 40%, rgb(228, 228, 228) 100%);
+    background: linear-gradient(to bottom left, rgb(255,250,250) 40%, rgb(255, 255, 255) 100%);
   }
   
   .card_title {
-    color: #ffffff;
+    font-family: 'AvenirNextLTPro-Regular';
+    color: #b6b6b6;
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -657,7 +819,8 @@ img {
   }
   
   .card_text {
-    color: #ffffff;
+    font-family: 'AvenirNextLTPro-Regular';
+    color: #000000;
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 1.25rem;    
@@ -737,7 +900,8 @@ img {
   }
   
   .btn_card  {
-    color: #ffffff;
+    font-family: 'AvenirNextLTPro-Regular';
+    color: #000000;
     padding: 0.8rem;
     font-size: 14px;
     text-transform: uppercase;
@@ -746,12 +910,13 @@ img {
     display: block;
     width: 100%;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     background: transparent;
   }
   
-  .btn_card :hover {
-    background-color: rgba(255, 255, 255, 0.12);
+  .btn_card:hover {
+    color: #b6b6b6;
+    font-size: 16px;
   }
   
   .cards {
@@ -782,11 +947,12 @@ img {
   
   .card_content {
     padding: 1rem;
-    background: linear-gradient(to bottom left, rgb(163, 163, 163) 40%, rgb(228, 228, 228) 100%);
+    background: linear-gradient(to bottom left, rgb(255,250,250) 40%, rgb(255, 255, 255) 100%);
   }
   
   .card_title {
-    color: #ffffff;
+    font-family: 'AvenirNextLTPro-Regular';
+    color: #b6b6b6;
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -795,7 +961,8 @@ img {
   }
   
   .card_text {
-    color: #ffffff;
+    font-family: 'AvenirNextLTPro-Regular';
+    color: #000000;
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 1.25rem;    
@@ -872,7 +1039,8 @@ img {
   }
   
   .btn_card  {
-    color: #ffffff;
+    font-family: 'AvenirNextLTPro-Regular';
+    color: #000000;
     padding: 0.8rem;
     font-size: 14px;
     text-transform: uppercase;
@@ -881,12 +1049,13 @@ img {
     display: block;
     width: 100%;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     background: transparent;
   }
   
-  .btn_card :hover {
-    background-color: rgba(255, 255, 255, 0.12);
+  .btn_card:hover {
+    color: #b6b6b6;
+    font-size: 16px;
   }
   
   .cards {
@@ -917,11 +1086,12 @@ img {
   
   .card_content {
     padding: 1rem;
-    background: linear-gradient(to bottom left, rgb(163, 163, 163) 40%, rgb(228, 228, 228) 100%);
+    background: linear-gradient(to bottom left, rgb(255,250,250) 40%, rgb(255, 255, 255) 100%);
   }
   
   .card_title {
-    color: #ffffff;
+    font-family: 'AvenirNextLTPro-Regular';
+    color: #b6b6b6;
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -930,7 +1100,8 @@ img {
   }
   
   .card_text {
-    color: #ffffff;
+    font-family: 'AvenirNextLTPro-Regular';
+    color: #000000;
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 1.25rem;    
