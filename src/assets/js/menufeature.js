@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   $('#toggle').click(function() {
     $(this).toggleClass('active');
-    $nav.removeClass('scrolled', $(this).scrollTop() > $nav.height());
+    $nav.toggleClass('noscroll');
     $('#overlay').toggleClass('open'); 
    });
 

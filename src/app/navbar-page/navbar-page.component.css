@@ -36,6 +36,11 @@ nav #brand {
   transition: background-color 200ms linear;
 }
 
+.navbar-fixed-top.noscroll {
+  background-color: transparent !important;
+  transition: background-color 200ms linear;
+}
+
 img.logo-navbar {
   width: 4rem !important;
   height: 4rem !important;
