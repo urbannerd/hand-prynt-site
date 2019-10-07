@@ -1,7 +1,7 @@
 ssh hand-prynt-website@45.76.1.125 <<EOF
 cd /
 cd home/hand-prynt-website
-rm -rf hand-prynt-site/
+sudo rm -rf hand-prynt-site/
 git clone -b production https://github.com/cooleyhighcel/hand-prynt-site.git
 cd ~/hand-prynt-site
 sudo npm install express
