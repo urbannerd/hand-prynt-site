@@ -6,6 +6,5 @@ git clone -b production https://github.com/cooleyhighcel/hand-prynt-site.git
 cd ~/hand-prynt-site
 npm install express
 npm install cors
-sudo pm2 start app.js 
 exit
 EOF
