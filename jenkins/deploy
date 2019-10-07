@@ -4,8 +4,8 @@ cd home/hand-prynt-website
 rm -rf hand-prynt-site/
 git clone -b production https://github.com/cooleyhighcel/hand-prynt-site.git
 cd ~/hand-prynt-site
-npm install express
-npm install cor
+sudo npm install express
+sudo npm install cor
 sudo npm install -g pm2 
 sudo pm2 start app.js 
 exit
