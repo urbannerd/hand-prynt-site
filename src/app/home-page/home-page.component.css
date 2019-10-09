@@ -827,7 +827,7 @@
   }
 
   #apt {
-    width: 100%;
+    width: 360px;
     height:100%;
  }
 
@@ -1111,8 +1111,8 @@
   }
 
   #apt {
-    width: 100%;
-    height:100%;
+    width: 375px;
+    height:812px;
  }
 
  /* This is purely for the demo */

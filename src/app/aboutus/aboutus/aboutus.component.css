@@ -62,7 +62,12 @@ hr.style1 {
   margin: 0 auto;
   width: 50%;
   text-align: center;
+  padding: 5px;
   margin-top: 5%;
+}
+
+.history_section .p {
+  text-indent: 30px;
 }
 
 .service_section {
