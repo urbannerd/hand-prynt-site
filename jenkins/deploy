@@ -2,9 +2,9 @@ ssh hand-prynt-website@45.76.1.125 <<EOF
 cd /
 cd home/hand-prynt-website
 rm -rf hand-prynt-site/
-git clone -b production https://github.com/cooleyhighcel/hand-prynt-site.git
+sudo git clone -b production https://github.com/cooleyhighcel/hand-prynt-site.git
 cd ~/hand-prynt-site
-npm install express
-npm install cors
+sudo npm install express
+sudo npm install cors
 exit
 EOF
